@@ -14,7 +14,10 @@ contract TestFallback is Test {
     }
 
     function testBar() public {
+        console.log(msg.sender);
         console.log(address(this));
+        console.logAddress(address(c.owner));
+
         assertEq(uint256(1), uint256(1), "ok");
     }
 
